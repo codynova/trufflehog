@@ -1,0 +1,33 @@
+{
+  "name": "trufflehog",
+  "version": "0.0.1",
+  "description": "Search for new subreddit posts that match your criteria",
+  "main": "index.js",
+  "bin": {
+    "trufflehog": "index.js"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codynova/trufflehog.git"
+  },
+  "keywords": [
+    "subreddit",
+    "search"
+  ],
+  "author": "Cody Nova",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codynova/trufflehog/issues"
+  },
+  "homepage": "https://github.com/codynova/trufflehog#readme",
+  "dependencies": {
+    "@koa/router": "8.0.8",
+    "chalk": "4.0.0",
+    "dotenv": "8.2.0",
+    "inquirer": "7.1.0",
+		"koa": "2.11.0",
+		"koa-bodyparser": "4.3.0",
+    "koa-logger": "3.2.1"
+  }
+}
