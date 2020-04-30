@@ -1,0 +1,11 @@
+{
+    "subredditName": "news",
+    "useBodySearch": true,
+    "useRegex": true,
+    "useCaseSensitive": true,
+    "searchString": "[a-zA-Z]{2,4}",
+    "pollingFrequency": 10,
+    "useNotifications": false,
+    "emailAddress": null,
+    "emailPassword": null
+}
