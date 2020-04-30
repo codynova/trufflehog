@@ -11,17 +11,29 @@
 2. Run:<br>
 `trufflehog`<br>
 
-3. Respond to the prompts to configure trufflehog, or see the config options below.<br><br>
+3. Respond to the prompts to configure trufflehog, or see the [config file options](#config-file-options) below.<br><br>
 
 
-## Config Options
+## Config Properties
+
+* `subredditName` - The subreddit name to search in
+* `useBodySearch` - Whether to search the post body in addition to the title
+* `useRegex` - Whether to use regex or regular string for the search
+* `useCaseSensitive` - Whether the search will be case-sensitive or not
+* `searchString` - The text or regex string to search for
+* `pollingFrequency` - How frequently to perform the search in seconds, between 1 and 86400
+* `useNotifications` - Whether to receive email notifications when a match is found (not yet implemented)
+<br>
+
+
+## Config File Options
 
 You can configure trufflehog by passing the filepath to the config file. Trufflehog accepts JSON and `.env` config files. If your config file is missing a setting that is required, trufflehog will prompt you for the setting.<br>
 
 
 #### JSON
 
-`trufflehog -c config.json` or `trufflehog --config config.json`
+`trufflehog -c path/to/config.json` or `trufflehog --config path/to/config.json`
 
 ```json
 {
@@ -31,9 +43,7 @@ You can configure trufflehog by passing the filepath to the config file. Truffle
     "useCaseSensitive": true,
     "searchString": "[a-zA-Z]{2,4}",
     "pollingFrequency": 10,
-    "useNotifications": false,
-    "emailAddress": null,
-    "emailPassword": null
+    "useNotifications": false
 }
 ```
 
@@ -43,30 +53,13 @@ You can configure trufflehog by passing the filepath to the config file. Truffle
 `trufflehog -c path/to/.env` or `trufflehog --config path/to/.env`
 
 ```
-# The subreddit name to search in
 subredditName=news
-
-# Whether to search the post body in addition to the title
 useBodySearch=true
-
-# Whether to use regex or regular string for the search
 useRegex=true
-
-# Whether the search will be case-sensitive or not
 useCaseSensitive=true
-
-# The text or regex string to search for
 searchString=[a-zA-Z]{2,4}
-
-# How frequently to perform the search in seconds, between 1 and 86400
 pollingFrequency=10
-
-# Whether to receive email notifications when a match is found
 useNotifications=false
-
-# Email settings are only required when useNotifications=true
-emailAddress=null
-emailPassword=null
 ```
 <br>
 
