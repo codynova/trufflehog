@@ -1,6 +1,6 @@
 {
   "name": "trufflehog",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Search for new subreddit posts that match your criteria",
   "main": "lib/index.js",
   "bin": {
